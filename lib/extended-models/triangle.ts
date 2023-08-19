@@ -11,7 +11,11 @@ export class Triangle extends BaseFigure {
   ) {
     super(FigureType.triangle);
 
-    if (firstCathetusWidth ** 2 + secondCathetusWidth ** 2 !== hypotenuseWidth ** 2) {
+    const isTriangleExists = firstCathetusWidth + secondCathetusWidth > hypotenuseWidth &&
+      secondCathetusWidth + hypotenuseWidth > firstCathetusWidth &&
+      firstCathetusWidth + hypotenuseWidth > secondCathetusWidth
+
+    if (!isTriangleExists) {
       throw new Error('Такого треугольника не существует')
     }
 
