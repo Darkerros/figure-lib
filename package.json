@@ -2,11 +2,11 @@
   "name": "figure-lib",
   "version": "1.0.0",
   "description": "",
-  "main": "./index.js",
-  "module": "./index.js",
+  "module": "dist/index.js",
+  "type": "module",
   "scripts": {
     "watch": "tsc --watch",
-    "build": "./node_modules/.bin/tsc --build ./tsconfig.json"
+    "build": "tsc --build ./tsconfig.json"
   },
   "author": "",
   "license": "ISC",
